@@ -1,0 +1,18 @@
+1. Mobile friendly
+2. Saves my bar
+3. Recommend drink
+
+4. Black list
+5. Fuzzy search (missing 1, missing2)
+6. Add ingredients/add recipe adds ingredients
+7. Visual ingredient display
+8. Recommendation of similar/better drinks
+9/ Menu -> Shopping list (other side/opposite of liquor -> drink)
+10. Wine pairing
+11. Sponsored drinks
+12. Monetization: recommendation for drinks - e-harmony for bars -> people
+13. Featured bartender
+14. Drinking buddies
+15. In app monetization
+16. Virality: share drinks, share my ratios
+17. Levels, badges, achievements
