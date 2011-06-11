@@ -14,11 +14,14 @@ function ingredientPicker(recipes) {
         // Find all ingredients and dedupe
         $(recipes).each(function() {
             $(this.ingredients).each(function() {
-                uniqueIngredients[this.name] = 1;
+                uniqueIngredients[this.name.toLowerCase()] = 1;
             });
         });
         
-        $("#addIngredientButton").button().click(pushIngredients);
+        $("#addIngredientButton").button().click(function() {
+            $("#ingredientsPicker").search();
+            pushIngredients();
+        });
        
         o.ingredients = Object.keys(uniqueIngredients).sort(function(a,b){
             if (a.length == b.length) {
@@ -43,7 +46,6 @@ function ingredientPicker(recipes) {
         // Clear ingredients
         $("#ingredientsPicker").val("");
         
-        
         $(ingredients).each(function(i,ingredient) {
             if (o.selectedIngredients[ingredient]) {
                 return; // already added
@@ -65,10 +67,15 @@ function ingredientPicker(recipes) {
     }
     
     function updateSearchResults() {
-        var results = CS.search(o.getSelected(), o.recipes);
+        var results = CS.searchFuzzy(o.getSelected(), o.recipes);
         
         var items = $(results).map(function() {
-            return $("<li>").text(this.name)[0];
+            var itemText = this.drink.name;
+            if (this.missing.length) {
+                itemText += " (" + this.missing.map(function(x) { return "-" + x; }).join(", ") + ")";
+            }
+            
+            return $("<li>").text(itemText)[0];
         })
         
         $("#searchResults").empty();
