@@ -3,14 +3,18 @@
     <title>Ingredient Picker</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.js"></script>
+    <script src="js/libs/jquery.autocomplete.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <div class="ui-widget">
 	<label for="ingredientsPicker">Ingredients: </label>
 	<input id="ingredientsPicker">
+	<span id="addIngredientButton">Add</span>
     </div>
+    <ul id="results"></ul>
 </body>
 <script src="ingredientPicker.js"></script>
 </html>
