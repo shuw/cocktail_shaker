@@ -16,6 +16,14 @@
 	}
 
 	function search(ingrediants, drinks, max_missing) {
+		if ( $.isArray(ingrediants) ) { // need table
+			var temp = {}
+			for ( var i = 0; i < ingrediants.length; i++ ){
+				temp[ingrediants[i]] = true;
+			}
+			ingrediants[temp];
+		}
+
 		if ( max_missing === undefined ) {
 			max_missing = 0;
 		}
