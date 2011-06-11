@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Daquiri",
+        "ingredients": [
+            {"name": "White Rum"},
+            {"name": "Lime Juice"},
+            {"name": "Syrup"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+   
+    {
+        "name": "Sazerac",
+        "ingredients": [
+            {"name": "Rye whiskey"},
+            {"name": "Peychaud's Bitters"},
+            {"name": "Syrup"},
+            {"name": "Absinthe"}
+        ],
+        "container": {"name": "Old Fashioned Glass"}
+    },
+    
+    {
+        "name": "Last Word",
+        "ingredients": [
+            {"name": "Gin"},
+            {"name": "Lime Juice"},
+            {"name": "Green Chartreuse"},
+            {"name": "Maraschino Liqueur"}
+        ],
+        "container": {"name": "Cocktail"}
+    },
+    
+    {
+        "name": "Old Fashioned",
+        "ingredients": [
+            {"name": "Orange slice"},
+            {"name": "Lemon twist"},
+            {"name": "Maraschino cherries"},
+            {"name": "Maraschino Liqueur"}
+        ],
+        "container": {"name": "Old Fashioned Glass"}
+    },
+    
+    {
+        "name": "Hot Toddy",
+        "ingredients": [
+            {"name": "Whisky"},
+            {"name": "Water"},
+            {"name": "Sugar or Honey"},
+            {"name": "Lesmon Juice"}
+        ],
+        "container": {"name": "Mug"}
+    },
+    
+    {
+        "name": "Blueberry tea",
+        "ingredients": [
+            {"name": "Grand Marnier liqueur"},
+            {"name": "Amaretto liqueur"},
+            {"name": "Sugar or Honey"}
+        ],
+        "container": {"name": "Brandy snifter"}
+    }
+]
