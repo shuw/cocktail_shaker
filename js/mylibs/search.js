@@ -1,7 +1,7 @@
 (function(CS) {
 
 	function can_make(ingrediants, drink, max_missing) {
-		var drink_ingrediants = drink.ingrediants,
+		var drink_ingrediants = drink.ingredients,
 			missing = 0,
 			have = 0;
 		for ( var i = 0; i < drink_ingrediants.length; i++ ) {
@@ -21,7 +21,7 @@
 			for ( var i = 0; i < ingrediants.length; i++ ){
 				temp[ingrediants[i]] = true;
 			}
-			ingrediants[temp];
+			ingrediants = temp;
 		}
 
 		if ( max_missing === undefined ) {

@@ -8,6 +8,15 @@
         ],
         "container": {"name": "Cocktail Glass"}
     },
+    
+    {
+        "name": "Rum and Coke",
+        "ingredients": [
+            {"name": "Rum"},
+            {"name": "Coke"}
+        ],
+        "container": {"name": "Lowball"}
+    },
    
     {
         "name": "Sazerac",
