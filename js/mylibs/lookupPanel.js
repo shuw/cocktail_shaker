@@ -8,8 +8,6 @@ function lookupPanel(recipes) {
         selectionUpdated: selectionUpdated
     });
     
-   
-    
     function selectionUpdated() {
         var results = CS.searchFuzzy(picker.getSelected(), recipes);
         
