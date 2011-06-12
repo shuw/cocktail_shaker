@@ -1,3 +1,7 @@
+if (!window.current_user) {
+    window.current_user = 74;
+}
+
 function index_context() {
     var panels = [
         $("#shakePanel"),
@@ -14,13 +18,17 @@ function index_context() {
         setActivePanel("search");
     });
     
-    setActivePanel("bar");
+    setActivePanel("shake");
     $(".homeButton").button().click(function() {
         setActivePanel("shake");
     });
+    
+    window.context = {};
+    window.context.setActivePanel = setActivePanel;
 }
 
 function gotData(recipes) {
     new lookupPanel(recipes);
-    new swizzlePanel(recipes);
+    var bar = new myBar(recipes);
+    new swizzlePanel(recipes, bar);
 }

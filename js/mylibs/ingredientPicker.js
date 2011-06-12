@@ -72,7 +72,6 @@ function ingredientPicker(recipes, context) {
         // Pass ingredients to caller
         o.addIngredients(ingredients);
     }
-
     
     function initPicker(recipes) {
         var picker = context.pickerNode.autocomplete(
