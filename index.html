@@ -123,9 +123,13 @@
 	    <a class="homeButton navigation">Cocktail Shaker</a>
     </div>
     <div class="ui-widget">
-			<label for="ingredientsPicker">What do you have?</label>
-			<input id="ingredientsPicker">
-			<span id="addIngredientButton">Add</span>
+			<form id="lookUpInput" action="javascript:void(0);">
+				<fieldset>
+					<label for="ingredientsPicker">What do you want to use?</label>
+					<input type="text" id="ingredientsPicker" />
+					<a class="action" id="addIngredientButton">Add</a>
+				</fieldset>
+			</form>
     </div>
     <ul id="selectedIngredients"></ul>
     

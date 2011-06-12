@@ -150,7 +150,25 @@ div.header > * {
 	font-size: 16px;
 }
 
+#lookUpInput > fieldset > * {
+	vertical-align: middle;
+}
+
+#lookUpInput label { 
+	display: block;
+	font-size: 16px;
+}
+
+#lookUpInput input[type=text] {
+	font-size: 16px;
+}
+
 #myBarSelected {
+	list-style-type: none;
+	margin-top: 2em;
+}
+
+#selectedIngredients {
 	list-style-type: none;
 	margin-top: 2em;
 }
