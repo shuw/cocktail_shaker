@@ -16,7 +16,9 @@
 
   <script src="js/libs/modernizr-custom.js"></script>
 
-  <!-- Swizzle It code -->
+	<!-- Swizzle It code -->
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.js"></script>
   <script src="js/libs/jquery.autocomplete.js"></script>
@@ -65,33 +67,54 @@
 					gotData(recipes);
 				}
 			});
+
+			if ( typeof window.DeviceMotionEvent == 'undefined' ) {
+				$('#swizzle-control').append('<input type="button" id="swizzle-button" value="Swizzle" />');
+			} else {
+				$('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
+			}
 		});
 
   </script>
+
+
+	<div id="swizzleHeader">
+		<h1 class="swizzle">Swizzle<span class="dot">.</span>it</h1>
+	</div>
   <div id="shakePanel">
-    <h1>Cocktail Shaker</h1>
-    <span id="editBarButton">Edit Your Bar</span>
-    <div>
-			<input type="button" id="swizzle-button" value="Swizzle" />
+		<div class="header">
+			<h1>Cocktail Shaker</h1>
+			<a id="editBarButton">My Bar</a>
+		</div>
+    <div id="swizzle-control">
     </div>
     <div id="swizzler-result">
     </div>
-    <span id="lookupButton">Look up</span>
   </div>
+
+
   <div id="barPanel">
-    <a class="homeButton">Back</a>
-    <h1>Welcome to your bar!</h1>
-    <label for="addToMyBarButton">What's in your bar?</label>
-	<input id="myBarPicker">
-    <span id="myBarSelected">Add</span>
+		<div class="header">
+			<a class="homeButton">Cocktail Shaker</a>
+			<h1>My Bar</h1>
+		</div>
+		<form action="javascript:void(0);">
+			<fieldset>
+				<label for="addToMyBarButton">What's in your bar?</label>
+				<input id="myBarPicker" type="text" />
+				<a id="myBarSelected" type="button" value="Add" />
+			</fieldset>
+		</form>
     <ul id="myBarIngredients"></ul>
   </div>
+
+
   <div id="searchPanel">
     <a class="homeButton">Back</a>
     <div class="ui-widget">
-	<label for="ingredientsPicker">What do you have?</label>
-	<input id="ingredientsPicker">
-	<span id="addIngredientButton">Add</span>
+			<label for="ingredientsPicker">What do you have?</label>
+			<input id="ingredientsPicker">
+			<span id="addIngredientButton">Add</span>
     </div>
     <ul id="selectedIngredients"></ul>
     

@@ -23,7 +23,7 @@ function index_context() {
     setActivePanel("shake");
     $(".homeButton").button().click(function() {
         setActivePanel("shake");
-    });
+	});
     
     window.context = {};
     window.context.setActivePanel = setActivePanel;
