@@ -19,7 +19,7 @@ function swizzlePanel(recipes, buddies, myBar) {
 		var cocktail = swizzler.pick.call(swizzler);
 		$('#swizzler-result-title').text('');
 		if ( cocktail ) {
-			$("#swizzle-button").attr({src: '/img/swizzle_UI_horiz_button_d2.png'}).addClass('minimized');
+			$("#swizzle-button").attr({src: 'img/swizzle_UI_horiz_button_d2.png'}).addClass('minimized');
 			$('#swizzler-result').append(getCocktailDisplay(cocktail, buddies));
 		}
 	}
