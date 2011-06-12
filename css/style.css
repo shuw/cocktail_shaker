@@ -239,8 +239,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 #swizzle-button {
-  height: 50px;
-  width: 250px;
+
+}
+
+#swizzle-button.smaller {
   font-size: 25px;
 }
 
@@ -342,6 +344,14 @@ div.header > * {
 
 #swizzle-control {
 	margin-bottom: 1em;
+}
+
+#swizzle-button {
+	padding: 0px 27.5px;
+}
+
+#swizzle-button.minimized {
+	padding: 0px 0px;
 }
 
 .instruction {
