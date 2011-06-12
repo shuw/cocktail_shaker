@@ -74,24 +74,22 @@
 		<h1 class="swizzle">Swizzle<span class="dot">.</span>it</h1>
 	</div>
   <div id="shakePanel">
-    <h1>Cocktail Shaker</h1>
-    <span id="editBarButton">Edit Your Bar</span>
 		<div class="header">
 			<h1>Cocktail Shaker</h1>
-			<div class="editBarButton">Edit Your Bar</div>
+			<a id="editBarButton">My Bar</a>
 		</div>
     <div>
 			<input type="button" id="swizzle-button" value="Swizzle" />
     </div>
     <div id="swizzler-result">
     </div>
-    <span id="lookupButton">Look up</span>
   </div>
+
+
   <div id="barPanel">
 		<div class="header">
-			<h1></h1>
-			<a>Back</a>
-			<h1>Bar</h1>
+			<a class="homeButton">Cocktail Shaker</a>
+			<h1>My Bar</h1>
 		</div>
 		<form action="javascript:void(0);">
 			<fieldset>
@@ -102,12 +100,14 @@
 		</form>
     <ul id="myBarIngredients"></ul>
   </div>
+
+
   <div id="searchPanel">
     <a class="homeButton">Back</a>
     <div class="ui-widget">
-	<label for="ingredientsPicker">What do you have?</label>
-	<input id="ingredientsPicker">
-	<span id="addIngredientButton">Add</span>
+			<label for="ingredientsPicker">What do you have?</label>
+			<input id="ingredientsPicker">
+			<span id="addIngredientButton">Add</span>
     </div>
     <ul id="selectedIngredients"></ul>
     

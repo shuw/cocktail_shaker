@@ -58,8 +58,17 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 input, select { vertical-align: middle; }
 
+div.header > * { 
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.header > h1 {
+	font-size: 18px;
+}
+
 #swizzleHeader {
-	margin: 1em 0px;
+	margin: 1em 0px 0px;
 }
 
 h1.swizzle {
