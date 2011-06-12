@@ -66,18 +66,15 @@ div#main {
 }
 
 #editBarButton {
-	width: 80px;
 	background-image: url('/img/right-arrow.png');
 	background-repeat: no-repeat;
 	background-position: 6px right;
 }
 
 #goToSwizzleButton {
-	width: 160px;
 	background-image: url('/img/left-arrow.png');
 	background-repeat: no-repeat;
 	background-position: 6px left;
-	padding-left: 1.2em;
 }
 
 a.action {
@@ -99,7 +96,7 @@ a.navigation {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	background-color: aliceBlue;
-	padding: 4px 6px;
+	padding: 4px 1.2em;
 }
 
 a.navigation:hover {
@@ -116,11 +113,20 @@ div.header > * {
 }
 
 .header > h1 {
-	font-size: 18px;
+	font-size: 22px;
 }
 
 #swizzleHeader {
 	margin: 1em 0px 0px;
+}
+
+#swizzleHeader > * {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#swizzleHeader h1 {
+	margin-right: 1em;
 }
 
 #swizzle-control {
