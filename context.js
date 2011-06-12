@@ -16,12 +16,12 @@ function index_context() {
         $("#" + panelName + "Panel").show();
     }
   
-    $("#searchButton").button().click(function() {
+    $("#searchButton").click(function() {
         setActivePanel("search");
     });
     
     setActivePanel("shake");
-    $(".homeButton").button().click(function() {
+    $(".homeButton").click(function() {
         setActivePanel("shake");
 	});
     
