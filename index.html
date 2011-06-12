@@ -44,9 +44,6 @@
 <body>
   <script>
   
-
-    document.domain = "mybar.mobi";
-
     // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
     MBP.scaleFix();
     
@@ -57,6 +54,8 @@
     });
     
     google.load('visualization', '1', {'packages':['corechart']});
+
+    document.domain = "mybar.mobi";
   </script>
   
   <script>

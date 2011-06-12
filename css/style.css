@@ -264,9 +264,11 @@ body > div.main {
 }
 
 #swizzle-result-container {
+	width: 250px;
   background: white;
   height: 240px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .panel {
