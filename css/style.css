@@ -309,3 +309,15 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .ui-button:hover {
 	cursor: pointer;
 }
+
+#swizzle-button {
+  height: 50px;
+  width: 250px;
+  font-size: 25px;
+}
+
+#swizzle-button.minimized {
+  height: auto;
+  width: auto;
+  font-size: medium;
+}

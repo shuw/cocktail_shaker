@@ -69,7 +69,7 @@
 			});
 
 			if ( typeof window.DeviceMotionEvent == 'undefined' ) {
-				$('#swizzle-control').append('<input type="button" id="swizzle-button" value="Swizzle" />');
+				$('#swizzle-control').append('<button id="swizzle-button">Swizzle!</button>');
 			} else {
 				$('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
 			}
@@ -86,7 +86,7 @@
 			<h1>Cocktail Shaker</h1>
 			<a id="editBarButton">My Bar</a>
 		</div>
-    <div id="swizzle-control">
+    <div class="swizzle" id="swizzle-control">
     </div>
     <div id="swizzler-result">
     </div>

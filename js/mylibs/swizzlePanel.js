@@ -37,6 +37,7 @@ function swizzlePanel(recipes, myBar) {
 		$('#swizzler-result').empty();
 		var cocktail = swizzler.pick.call(swizzler);
 		if ( cocktail ) {
+			$("#swizzle-button").text("swizzle").addClass('minimized');
 			$('#swizzler-result').append(getCocktailDisplay(cocktail.drink));
 		} else {
 			$('#swizzler-result').append('<div>No cocktails for you</div>');
