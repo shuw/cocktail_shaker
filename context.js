@@ -13,7 +13,7 @@ function index_context() {
     
     function setActivePanel(panelName) {
         $(panels).each(function() { this.hide() });
-        $("#" + panelName + "Panel").show("slide", {direction: "left"});
+        $("#" + panelName + "Panel").show();
     }
   
     $("#searchButton").click(function() {
