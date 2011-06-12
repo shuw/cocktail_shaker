@@ -6,9 +6,7 @@ function swizzlePanel(recipes) {
 	var o = this;
 
 	var swizzler = new Swizzler($('#swizzler-result'), function() {
-		var temp = CS.search([], recipes, 0, 10);
-		console.log(temp);
-		return temp;
+		return CS.search([], recipes, 0, 10); // TODO
 	});
 
 	function onSwizzle() {
