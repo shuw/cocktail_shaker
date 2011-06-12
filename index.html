@@ -52,7 +52,15 @@
   <script>   
     $(document).ready(function() {
       new index_context();
-    });
+
+			$.ajax({
+				url: 'data/recipes.json',
+				dataType: 'json',
+				success: function(recipes) {
+					gotData(recipes);
+				}
+		});
+
   </script>
   <div id="shakePanel">
     <h1>Cocktail Shaker</h1>

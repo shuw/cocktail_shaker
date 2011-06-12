@@ -24,11 +24,3 @@ function gotData(recipes) {
     new lookupPanel(recipes);
 	new swizzlePanel(recipes);
 }
-
-$.ajax({
-     url: 'data/recipes.json',
-     dataType: 'json',
-     success: function(recipes) {
-        gotData(recipes);
-     }
- });
