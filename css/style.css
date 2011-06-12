@@ -417,3 +417,9 @@ h1.swizzle span.dot {
 #swizzle-button {
   cursor: pointer;
 }
+
+#myBarSelected {
+  height: 250px;
+  width: 280px;
+  overflow: auto;
+}
