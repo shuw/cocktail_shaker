@@ -1,5 +1,7 @@
-if (!window.current_user) {
+if (window.current_user === undefined) {
     window.current_user = getParameterByName('uid');
+} else if (window.current_user === 0) {
+    window.location = "http://mybar.mobi/user";
 }
 
 function index_context() {

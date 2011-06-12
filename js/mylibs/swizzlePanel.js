@@ -1,5 +1,11 @@
-function getCocktailDisplay(cocktail, buddies) {
-	var header = $('<h3>').text(cocktail.name);
+function getCocktailDisplay(result, buddies) {
+	var cocktail = result.drink;
+	var itemText = cocktail.name;
+	if (result.missing.length) {
+	    itemText += " (" + result.missing.map(function(x) { return "-" + x; }).join(", ") + ")";
+	}
+	
+	var header = $('<h3>').text(itemText);
 	
 	var details = $('<div class="directions">');
 
@@ -18,6 +24,10 @@ function getCocktailDisplay(cocktail, buddies) {
 	
 	var matchedBuddies = buddies[cocktail.name.toLowerCase()];
 	
+	var matchedBuddies = $(matchedBuddies).filter(function() {
+		return this.uid != current_user;
+	})
+	
 	var drinkingDuddies  = null;
 	if (matchedBuddies && matchedBuddies.length) {
 		drinkingDuddies = $('<div">');
@@ -27,9 +37,9 @@ function getCocktailDisplay(cocktail, buddies) {
 		
 		var items = $(matchedBuddies).map(function(i, buddy) {
 			var holder = $('<div>');
-			holder.append($('<img style="width: 40px;" src="' + buddy.pic + '">'));
+			holder.append($('<img style="width: 50px; padding-right: 8px; padding-top:4px;" src="' + buddy.pic + '">'));
 			
-			holder.append($('<span>').text(buddy.name)[0]);
+			holder.append($('<div>').text(buddy.name)[0]);
 			
 			return holder[0];
 		});
@@ -59,7 +69,7 @@ function swizzlePanel(recipes, buddies, myBar) {
 		var cocktail = swizzler.pick.call(swizzler);
 		if ( cocktail ) {
 			$("#swizzle-button").text("swizzle").addClass('minimized');
-			$('#swizzler-result').append(getCocktailDisplay(cocktail.drink, buddies));
+			$('#swizzler-result').append(getCocktailDisplay(cocktail, buddies));
 		} else {
 			$('#swizzler-result').append('<div>No cocktails for you</div>');
 		}
