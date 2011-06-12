@@ -96,6 +96,6 @@ $.ajax({
 			return CS.search([], recipes, 10);
 		});
 		$('#swizzle-button').click(function() { swizzler.pick.call(swizzler); });
-		shakeDetector(swizzler.pick);
+		shakeDetector(function() { swizzler.pick.call(swizzler) });
      }
  });
