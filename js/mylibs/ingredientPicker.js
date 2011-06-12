@@ -1,13 +1,15 @@
-function ingredientPicker(recipes) {
+function ingredientPicker(recipes, context) {
     var o = this;
     o.recipes = recipes;
     o.ingredients = [];
+ 
     o.selectedIngredients = { };
-    
+  
+  
     o.getSelected = function() {
         return Object.keys(o.selectedIngredients).map(function(obj) { return obj.toLowerCase(); });
     }
-    
+  
     function init(recipes) {
         var uniqueIngredients = {};
         
@@ -18,8 +20,8 @@ function ingredientPicker(recipes) {
             });
         });
         
-        $("#addIngredientButton").button().click(function() {
-            $("#ingredientsPicker").search();
+        context.addButtonNode.button().click(function() {
+            context.pickerNode.search();
             pushIngredients();
         });
        
@@ -37,15 +39,20 @@ function ingredientPicker(recipes) {
     
     function pushIngredients() {
         // Clean up and get user entered ingredients
-        var ingredients = $("#ingredientsPicker").val().trim().split(",").map(function(item) {
+        var ingredients = context.pickerNode.val().trim().split(",").map(function(item) {
             return item.trim();
         }).filter(function (item) {
             return item != "";
         });
         
-        // Clear ingredients
-        $("#ingredientsPicker").val("");
+        // Clear selected ingredients
+        context.pickerNode.val("");
         
+        // Pass ingredients to caller
+        itemsAdded(ingredients);
+    }
+    
+    function itemsAdded(ingredients) {
         $(ingredients).each(function(i,ingredient) {
             if (o.selectedIngredients[ingredient]) {
                 return; // already added
@@ -56,48 +63,27 @@ function ingredientPicker(recipes) {
             var removeButton = $("<a href='#'>").text("X").click(function() {
                 delete o.selectedIngredients[ingredient];
                 item.remove();
-                updateSearchResults();
+                context.selectionUpdated();
             });
             
             var item = $("<li>").text(ingredient + " ").append(removeButton);
-            $("#selectedIngredients").append(item);
+            context.selectedNode.append(item);
         });
         
-        updateSearchResults();
+        context.selectionUpdated();
     }
     
-    function updateSearchResults() {
-        var results = CS.searchFuzzy(o.getSelected(), o.recipes);
-        
-        var items = $(results).map(function() {
-            var itemText = this.drink.name;
-            if (this.missing.length) {
-                itemText += " (" + this.missing.map(function(x) { return "-" + x; }).join(", ") + ")";
-            }
-            
-            return $("<li>").text(itemText)[0];
-        })
-        
-        $("#searchResults").empty();
-        $("#searchResults").append(items);
-    }
     
     function initPicker(recipes) {
-        var picker = $("#ingredientsPicker").autocomplete(
+        var picker = context.pickerNode.autocomplete(
             o.ingredients,  {
                 autoFill: true,
                 matchContains: "word"
             }
-        ).result(pushIngredients);
+        )
+        .result(pushIngredients)
+        .focus();
     }
     
     init(recipes);
 }
-
-$.ajax({
-     url: 'data/recipes.json',
-     dataType: 'json',
-     success: function(recipes) {
-        new ingredientPicker(recipes);
-     }
- });
