@@ -109,12 +109,16 @@ function getVisualDisplay(ingredients) {
 			return;
 		}
 		
+		
+		var amount = parseFloat(comps[0]);
 		var unit = comps[1];
-		if (unit != "oz") {
+		if (unit == "gill") {
+			amount = amount * 4;	
+		}
+		else if (unit != "oz") {
 			return;
 		}
 		
-		var amount = parseFloat(comps[0]);
 		parts.push({
 			amount: amount,
 			ingredient: this
@@ -143,8 +147,14 @@ function getVisualDisplay(ingredients) {
 	var chartContainer = $("#result-chart");
 	var chart = new google.visualization.PieChart(chartContainer[0]);
 	chart.draw(data, {
-		width: 300,
-		height: 200,
-		is3D: true
+		width: 280,
+		height: 150,
+		is3D: true,
+		chartArea: {
+			left: 0,
+			right: 0,
+			height: 140
+		},
+		legend: 'right'
 	});
 }
