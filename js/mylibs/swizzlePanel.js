@@ -26,7 +26,7 @@ function swizzlePanel(recipes, myBar) {
 	});
 	
 	$("#lookupButton").button().click(function() {
-		context.setActivePanel("bar");
+		context.setActivePanel("search");
 	});
 
 	var swizzler = new Swizzler($('#swizzler-result'), function() {
