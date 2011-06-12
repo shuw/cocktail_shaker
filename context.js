@@ -14,7 +14,7 @@ function index_context() {
         setActivePanel("search");
     });
     
-    setActivePanel("shake");
+    setActivePanel("bar");
     $(".homeButton").button().click(function() {
         setActivePanel("shake");
     });
@@ -22,6 +22,7 @@ function index_context() {
 
 function gotData(recipes) {
     new lookupPanel(recipes);
+    new myBar(recipes);
 }
 
 $.ajax({
@@ -31,3 +32,5 @@ $.ajax({
         gotData(recipes);
      }
  });
+
+document.domain = "mybar.mobi";

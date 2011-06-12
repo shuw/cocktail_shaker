@@ -9,6 +9,27 @@ function ingredientPicker(recipes, context) {
     o.getSelected = function() {
         return Object.keys(o.selectedIngredients).map(function(obj) { return obj.toLowerCase(); });
     }
+      
+    o.addIngredients = function(ingredients) {
+        $(ingredients).each(function(i,ingredient) {
+            if (o.selectedIngredients[ingredient]) {
+                return; // already added
+            }
+            
+            o.selectedIngredients[ingredient] = true;
+            
+            var removeButton = $("<a href='#'>").text("X").click(function() {
+                delete o.selectedIngredients[ingredient];
+                item.remove();
+                context.selectionUpdated();
+            });
+            
+            var item = $("<li>").text(ingredient + " ").append(removeButton);
+            context.selectedNode.append(item);
+        });
+        
+        context.selectionUpdated();
+    }
   
     function init(recipes) {
         var uniqueIngredients = {};
@@ -49,30 +70,9 @@ function ingredientPicker(recipes, context) {
         context.pickerNode.val("");
         
         // Pass ingredients to caller
-        itemsAdded(ingredients);
+        o.addIngredients(ingredients);
     }
-    
-    function itemsAdded(ingredients) {
-        $(ingredients).each(function(i,ingredient) {
-            if (o.selectedIngredients[ingredient]) {
-                return; // already added
-            }
-            
-            o.selectedIngredients[ingredient] = true;
-            
-            var removeButton = $("<a href='#'>").text("X").click(function() {
-                delete o.selectedIngredients[ingredient];
-                item.remove();
-                context.selectionUpdated();
-            });
-            
-            var item = $("<li>").text(ingredient + " ").append(removeButton);
-            context.selectedNode.append(item);
-        });
-        
-        context.selectionUpdated();
-    }
-    
+
     
     function initPicker(recipes) {
         var picker = context.pickerNode.autocomplete(
