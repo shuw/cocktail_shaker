@@ -65,13 +65,13 @@ body {
 div#main {
 }
 
-#editBarButton {
+.advancedButton {
 	background-image: url('/img/right-arrow.png');
 	background-repeat: no-repeat;
 	background-position: 6px right;
 }
 
-#goToSwizzleButton {
+.homeButton {
 	background-image: url('/img/left-arrow.png');
 	background-repeat: no-repeat;
 	background-position: 6px left;
@@ -117,7 +117,7 @@ div.header > * {
 }
 
 #swizzleHeader {
-	margin: 1em 0px 0px;
+	margin: 1em 0 .5em 0;
 }
 
 #swizzleHeader > * {
