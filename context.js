@@ -14,7 +14,7 @@ function index_context() {
         setActivePanel("search");
     });
     
-    setActivePanel("bar");
+    setActivePanel("shake");
     $(".homeButton").button().click(function() {
         setActivePanel("shake");
     });
