@@ -58,6 +58,18 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 input, select { vertical-align: middle; }
 
+#swizzleHeader {
+	margin: 1em 0px;
+}
+
+h1.swizzle {
+	font-family: 'Play', arial, serif;
+	font-size: 22px;
+}
+
+h1.swizzle span.dot {
+	color: #888;
+}
 
 
 /**
@@ -233,4 +245,8 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
+}
+
+.ui-button:hover {
+	cursor: pointer;
 }
