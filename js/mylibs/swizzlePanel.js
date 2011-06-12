@@ -1,18 +1,19 @@
 function getCocktailDisplay(cocktail) {
-	header = $('h3').text(cocktail.name);
+	var header = $('<h3>').text(cocktail.name);
 	
 	var details = $('<div class="directions">');
 
 	if (cocktail.directions) {
-		details.text(cocktail.directions);
+		details.html(cocktail.directions);
 	} else {
-		var ingredients = $('ul');
+		var ingredients = $('<ul>');
 		details.append(ingredients);
 		
-		$(cocktail.ingredients).each(function() {
-			ingredients.append( $('li').text(this.name) );
+		var items = $(cocktail.ingredients).map(function(i, ingredient) {
+			return $('<li>').text(ingredient.name)[0];
 		});
-		debugger
+		
+		ingredients.append(items);
 	}
 
 	return $('<div class="cocktail result">').append(header, details);

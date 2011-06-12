@@ -1,7 +1,5 @@
 if (!window.current_user) {
     window.current_user = getParameterByName('uid');
-    
-    
 }
 
 function index_context() {
