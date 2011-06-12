@@ -420,3 +420,6 @@ h1.swizzle span.dot {
 	color: #888;
 }
 
+#swizzle-button {
+  cursor: pointer;
+}

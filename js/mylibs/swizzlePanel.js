@@ -19,7 +19,7 @@ function swizzlePanel(recipes, buddies, myBar) {
 		var cocktail = swizzler.pick.call(swizzler);
 		$('#swizzler-result-title').text('');
 		if ( cocktail ) {
-			$("#swizzle-button").attr({src: '/img/swizzle_UI_horiz_button_d2.png'}).addClass('minimized');
+			$("#swizzle-button").attr({src: 'img/swizzle_UI_horiz_button_d2.png'}).addClass('minimized');
 			$('#swizzler-result').append(getCocktailDisplay(cocktail, buddies));
 		}
 	}
@@ -155,16 +155,17 @@ function getVisualDisplay(ingredients) {
 	var chartContainer = $("#result-chart");
 	var chart = new google.visualization.PieChart(chartContainer[0]);
 	chart.draw(data, {
-		width: 280,
-		height: 150,
+		width: 300,
+		height: 140,
 		is3D: true,
 		chartArea: {
 			left: 0,
 			right: 0,
-			height: 140,
-			width: 180
+			height: 120,
+			width: 290
 		},
 		backgroundColor: "#E6E6E6",
+		legendTextStyle: "width: 300px;",
 		legend: 'right'
 	});
 }
