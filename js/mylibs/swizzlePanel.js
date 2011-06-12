@@ -52,11 +52,11 @@ function getCocktailDisplay(result, buddies) {
 
 function swizzlePanel(recipes, buddies, myBar) {
 	var o = this;
-	$("#editBarButton").button().click(function() {
+	$("#editBarButton").click(function() {
 		context.setActivePanel("bar");
 	});
 	
-	$("#lookupButton").button().click(function() {
+	$("#lookupButton").click(function() {
 		context.setActivePanel("search");
 	});
 
