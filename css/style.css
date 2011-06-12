@@ -115,7 +115,7 @@ div.header > * {
 }
 
 #swizzleHeader {
-	margin: 1em 0 .5em 0;
+	margin: 0 0 .5em 0;
 }
 
 #swizzleHeader > * {
@@ -377,13 +377,26 @@ only screen and (min-device-pixel-ratio: 1.5) {
   font-size: 25px;
 }
 
-#swizzle-button.minimized {
-  height: auto;
-  width: auto;
-  font-size: medium;
-}
-
 a.ingredientLink {
   color: black !important;
   text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body > div.main {
+  padding: 0;
+  margin: 0;
+  width: 320px;
+  height: 419px;
+  background-image: url("../img/swizzle_UI_BG_d1.png");
+}
+
+#swizzle-result-container {
+  background: white;
+  height: 240px;
+  overflow: auto;
 }

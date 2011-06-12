@@ -13,6 +13,7 @@ function swizzlePanel(recipes, buddies, myBar) {
 	});
 
 	function onSwizzle() {
+		$("#swizzle-result-container").show();
 		$("#result-chart").empty();
 		$('#swizzler-result').empty();
 		var cocktail = swizzler.pick.call(swizzler);

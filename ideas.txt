@@ -16,3 +16,6 @@
 15. In app monetization
 16. Virality: share drinks, share my ratios
 17. Levels, badges, achievements
+
+
+18. Shake button is a square glassy button. When you shake, drink ingredients pour in and mix together.
