@@ -2,11 +2,18 @@ function getCocktailDisplay(cocktail) {
 	return $('<div class="cocktail result"><h3>'+cocktail.name+'</h3><div class="directions">'+cocktail.directions+'</div></div>');
 }
 
-function swizzlePanel(recipes) {
+function swizzlePanel(recipes, myBar) {
 	var o = this;
+	$("#editBarButton").button().click(function() {
+		context.setActivePanel("bar");
+	});
+	
+	$("#lookupButton").button().click(function() {
+		context.setActivePanel("bar");
+	});
 
 	var swizzler = new Swizzler($('#swizzler-result'), function() {
-		return CS.search([], recipes, 0, 10); // TODO
+		return CS.searchFuzzy(myBar.getInventory(), recipes);
 	});
 
 	function onSwizzle() {

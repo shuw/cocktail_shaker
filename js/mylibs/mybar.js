@@ -40,6 +40,12 @@ function myBar(recipes) {
                 removed.push(item);
            }
         });
+        
+        SwizzleApi.addItems(current_user, added);
+        $(removed).each(function(i, item) {
+            SwizzleApi.removeItem(current_user, item);
+        })
+        
     }
     
     o.populated = false;
@@ -49,20 +55,36 @@ function myBar(recipes) {
         $(myStuff).each(function() { o.myInventory[this] = true });
     }
     
-    loadDataForUser(74, function(myStuff) {
+    SwizzleApi.getItems(current_user, function(myStuff) {
         o.picker.addIngredients(myStuff);
         updateInventory(myStuff);
     });
 }
 
-
-function loadDataForUser(userId, callback) {
-    callback(["rum", "coke"]);
-    return;
+SwizzleApi = new function() {
+    this.getItems = function(userId, callback) {
+        $.ajax({
+             url: 'http://mybar.mobi/cocktail_shaker/getbar.php?uid=' + userId,
+             dataType: 'json',
+             success: callback
+        });
+    }
     
-    $.ajax({
-         url: 'http://www.mybar.mobi/getbar.php?uid=' + userId,
-         dataType: 'json',
-         success: callback
-    });
-}
+    this.addItems = function(userId, items, callback) {
+        var ingredients = items.join(',');
+
+        $.ajax({
+             url: 'http://mybar.mobi/cocktail_shaker/addingredient.php?uid=' + userId + "&ingredients=" + encodeURIComponent(ingredients),
+             dataType: 'json',
+             success: callback
+        });
+    }
+    
+     this.removeItem = function(userId, item, callback) {
+        $.ajax({
+             url: 'http://mybar.mobi/cocktail_shaker/removeingredient.php?uid=' + userId + "&ingredient=" + encodeURIComponent(item),
+             dataType: 'json',
+             success: callback
+        });
+    }
+};

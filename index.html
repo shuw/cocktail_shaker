@@ -26,7 +26,9 @@
   
   <script src="context.js" type="text/javascript"></script>
   <script src="js/mylibs/helper.js"></script>
-	<script src="js/mylibs/cookie.js" type="text/javascript"></script>
+  <script src="current_user.php"></script>
+  <script src="js/mylibs/cookie.js" type="text/javascript"></script>
+  <script src="js/mylibs/mybar.js" type="text/javascript"></script>
   <script src="js/mylibs/swizzler.js" type="text/javascript"></script>
   <script src="js/mylibs/ingredientPicker.js" type="text/javascript"></script>
   <script src="js/mylibs/shakeDetector.js" type="text/javascript"></script>
@@ -38,6 +40,10 @@
 
 <body>
   <script>
+  
+
+    document.domain = "mybar.mobi";
+
     // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
     MBP.scaleFix();
     
@@ -64,12 +70,13 @@
   </script>
   <div id="shakePanel">
     <h1>Cocktail Shaker</h1>
-    <div class="editBarButton">Edit Your Bar</div>
+    <span id="editBarButton">Edit Your Bar</span>
     <div>
 			<input type="button" id="swizzle-button" value="Swizzle" />
     </div>
-		<div id="swizzler-result">
-		</div>
+    <div id="swizzler-result">
+    </div>
+    <span id="lookupButton">Look up</span>
   </div>
   <div id="barPanel">
     <a class="homeButton">Back</a>
