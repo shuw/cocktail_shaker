@@ -18,13 +18,13 @@ function ingredientPicker(recipes, context) {
             
             o.selectedIngredients[ingredient] = true;
             
-            var removeButton = $("<a href='#'>").text("X").click(function() {
+            var removeButton = $('<a class="remove" href="javascript:void(0)"></a>').text('X').click(function() {
                 delete o.selectedIngredients[ingredient];
                 item.remove();
                 context.selectionUpdated();
-            });
+            }).button();
             
-            var item = $("<li>").text(ingredient + " ").append(removeButton);
+            var item = $('<li class="ingredient"></li>').text(ingredient + ' ').prepend(removeButton);
             context.selectedNode.append(item);
         });
         
