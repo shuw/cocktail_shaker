@@ -89,14 +89,14 @@
 	<div id="main">
 		<div id="swizzleHeader">
 			<h1 class="swizzle">Swizzle<span class="dot">.</span>it</h1>
-			<div class="logout">
+			<div class="authentication">
 				<a href="/logout">fizzle (signoff)</a>
 			</div>
 		</div>
 		<div id="shakePanel">
 			<div class="header">
-				<a id="editBarButton" class="navigation">My Bar</a>
-				<a id="lookupButton"><img alt="look up" src="img/Magnifying-Glass-icon.png"></img></a>
+				<a id="editBarButton" class="advancedButton navigation">My Bar</a>
+				<a class="navigation advancedButton" id="lookupButton">Look Up</a>
 			</div>
 			<div class="swizzle" id="swizzle-control">
 			</div>
@@ -104,12 +104,14 @@
 			<div id="result-chart"></div>
 			<div id="swizzler-result">
 			</div>
+			<div class="footer">
+			</div>
 		</div>
 
 
 		<div id="barPanel">
 			<div class="header">
-				<a id="goToSwizzleButton" class="homeButton navigation">Cocktail Shaker</a>
+				<a class="homeButton navigation">Cocktail Shaker</a>
 			</div>
 			<form id="editMyBar" action="javascript:void(0);">
 				<fieldset>
@@ -124,13 +126,16 @@
 
   <div id="searchPanel">
     <div class="header">
-	    <a class="homeButton">Cocktail Shaker</a>
-	    <h1>Find</h1>
+	    <a class="homeButton navigation">Cocktail Shaker</a>
     </div>
     <div class="ui-widget">
-      <label for="ingredientsPicker">What do you have?</label>
-      <input id="ingredientsPicker">
-      <span id="addIngredientButton">Add</span>
+			<form id="lookUpInput" action="javascript:void(0);">
+				<fieldset>
+					<label for="ingredientsPicker">What do you want to use?</label>
+					<input type="text" id="ingredientsPicker" />
+					<a class="action" id="addIngredientButton">Add</a>
+				</fieldset>
+			</form>
     </div>
     <ul id="selectedIngredients"></ul>
     

@@ -65,14 +65,12 @@ body {
 div#main {
 }
 
-#editBarButton {
-	background-image: url('/img/right-arrow.png');
+.advancedButton {
 	background-repeat: no-repeat;
 	background-position: 6px right;
 }
 
-#goToSwizzleButton {
-	background-image: url('/img/left-arrow.png');
+.homeButton {
 	background-repeat: no-repeat;
 	background-position: 6px left;
 }
@@ -117,7 +115,7 @@ div.header > * {
 }
 
 #swizzleHeader {
-	margin: 1em 0px 0px;
+	margin: 1em 0 .5em 0;
 }
 
 #swizzleHeader > * {
@@ -150,7 +148,25 @@ div.header > * {
 	font-size: 16px;
 }
 
+#lookUpInput > fieldset > * {
+	vertical-align: middle;
+}
+
+#lookUpInput label { 
+	display: block;
+	font-size: 16px;
+}
+
+#lookUpInput input[type=text] {
+	font-size: 16px;
+}
+
 #myBarSelected {
+	list-style-type: none;
+	margin-top: 2em;
+}
+
+#selectedIngredients {
 	list-style-type: none;
 	margin-top: 2em;
 }
