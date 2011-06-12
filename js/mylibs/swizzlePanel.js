@@ -21,8 +21,6 @@ function swizzlePanel(recipes, buddies, myBar) {
 		if ( cocktail ) {
 			$("#swizzle-button").text("swizzle").addClass('minimized');
 			$('#swizzler-result').append(getCocktailDisplay(cocktail, buddies));
-		} else {
-			$('#swizzler-result').append('<div>No cocktails for you</div>');
 		}
 	}
 
@@ -49,7 +47,6 @@ function getCocktailDisplay(result, buddies) {
 	if (cocktail.directions) {
 		details.html(cocktail.directions);
 	} else {
-		
 		
 		var ingredients = $('<ul>');
 		details.append(ingredients);
