@@ -87,6 +87,40 @@ div.header > * {
 	color: #aaa;
 }
 
+#editMyBar > fieldset > * {
+	vertical-align: middle;
+}
+
+#editMyBar label { 
+	display: block;
+	font-size: 16px;
+}
+
+#editMyBar input[type=text] {
+	font-size: 16px;
+}
+
+#editMyBar a {
+	font-size: 16px;
+}
+
+#myBarSelected {
+	list-style-type: none;
+	margin-left: .2em;
+	margin-top: 1em;
+}
+
+.ingredient {
+	font-size: 16px;
+	margin-bottom: .5em;
+	margin-left: .1px;
+}
+
+.ingredient a.remove {
+	font-size: 18px;
+	margin-right: .5em;
+}
+
 h1.swizzle {
 	font-family: 'Play', arial, serif;
 	font-size: 22px;
