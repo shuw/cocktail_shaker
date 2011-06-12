@@ -22,6 +22,7 @@ function index_context() {
 
 function gotData(recipes) {
     new lookupPanel(recipes);
+	new swizzlePanel(recipes);
 }
 
 $.ajax({
