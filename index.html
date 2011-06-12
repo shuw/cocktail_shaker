@@ -72,8 +72,12 @@
 		$.ajax({
 		    url: 'data/buddies.json',
 		    dataType: 'json'
+		}),
+		$.ajax({
+		    url: 'data/bartenders.json',
+		    dataType: 'json'
 		})
-	    ).done(function(recipes, buddies) {
+	    ).done(function(recipes, buddies, bartenders) {
 	        $("#main").show();
 		$("#loading").hide();
 	  
