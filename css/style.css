@@ -264,17 +264,18 @@ body > div.main {
 }
 
 #swizzle-result-container {
-	width: 250px;
-  background: white;
+  width:300px;
+  background: #E6E6E6;
   height: 240px;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 5px;
 }
 
 .panel {
 	width: 100%;
 	height: 100%;
-	padding: 15px 25px;
+	padding: 0px 5px;
 }
 
 .advancedButton {

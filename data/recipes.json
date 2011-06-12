@@ -1,5 +1,252 @@
 [
     {
+        "name": "Bourbon Renewal",
+        "bartender": "Jeffrey Morgenthaler",
+        "ingredients": [
+            {"name": "Bourbon"},
+            {"name": "Lemon Juice"},
+            {"name": "Creme de Cassis"},
+            {"name": "Simple Syrup"},
+            {"name": "Angostura Bitters"}
+        ],
+        "container": {"name": "Lowball"}
+    },
+    {
+        "name": "Egg Nog",
+        "bartender": "Jeffrey Morgenthaler",
+        "ingredients": [
+            {"name": "Eggs"},
+            {"name": "Sugar"},
+            {"name": "Nutmeg"},
+            {"name": "Brandy"},
+            {"name": "Spiced Rum"},
+            {"name": "Milk"},
+            {"name": "Cream"}
+        ],
+        "container": {"name": "Wine Glass"}
+    },
+    {
+        "name": "Richmond Gimlet",
+        "bartender": "Jeffrey Morgenthaler",
+        "ingredients": [
+            {"name": "Gin"},
+            {"name": "Lime Juice"},
+            {"name": "Simple Syrup"},
+            {"name": "Mint"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Norwegian Wood",
+        "bartender": "Jeffrey Morgenthaler",
+        "ingredients": [
+            {"name": "Aquavit"},
+            {"name": "Applejack"},
+            {"name": "Sweet Vermouth"},
+            {"name": "Yellow Chartreuse"},
+            {"name": "Angostura Bitters"}
+        ],
+        "container": {"name": "Cocktail Coupe"}
+    },
+    {
+        "name": "Elena's Virtue",
+        "bartender": "Andrew Bohrer",
+        "ingredients": [
+            {"name": "Amaro Nonino"},
+            {"name": "Amaro Montenegro"},
+            {"name": "Lime"},
+            {"name": "Tuaca"},
+            {"name": "Luxardo Amaretto"},
+            {"name": "Ramazotti Amaro"}
+        ],
+        "container": {"name": "Maitai Glass"}
+    },
+    {
+        "name": "Le Carre",
+        "bartender": "Jamie Boudreau",
+        "ingredients": [
+            {"name": "Ron Zacapt 23yr Rum"},
+            {"name": "Xante Pear"},
+            {"name": "Dubonnet"},
+            {"name": "Angostura Bitters"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Peychaud Flip",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Gin"},
+            {"name": "Cherry Brandy"},
+            {"name": "Lemon Juice"},
+            {"name": "Agave Nectar"},
+            {"name": "Egg White"}
+        ],
+        "container": {"name": "Collins Glass"}
+    },
+    {
+        "name": "Peychaud Flip",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Cruzan Blackstrap Rum"},
+            {"name": "Lime Juice"},
+            {"name": "Demerara Syrup"},
+            {"name": "Ginger Beer"},
+            {"name": "Nutmeg"}
+        ],
+        "container": {"name": "Collins Glass"}
+    },
+    {
+        "name": "Violet Fizz",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Dolin Blanc"},
+            {"name": "Lillet Blanc"},
+            {"name": "Creme de Violet"},
+            {"name": "Lemon Juice"},
+            {"name": "Soda"}
+        ],
+        "container": {"name": "Collins Glass"}
+    },
+    {
+        "name": "Blackstrap Sour",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Cruzan Blackstrap Rum"},
+            {"name": "Lime Juice"},
+            {"name": "Demerara Syrup"},
+            {"name": "Egg White"},
+            {"name": "Soda"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Charente Swizzle",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Domaine de Canton"},
+            {"name": "Cherry Heering"},
+            {"name": "Yellow Chartreuse"},
+            {"name": "Lemon Juice"},
+            {"name": "Grapefruit Bitters"}
+        ],
+        "container": {"name": "Collins Glass"}
+    },
+    {
+        "name": "Piece de Resistance",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Vodka"},
+            {"name": "Cointreau"},
+            {"name": "Benedictine"},
+            {"name": "Orange Bitters"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Do You Still Hate Me?",
+        "bartender": "Kevin Langmack",
+        "ingredients": [
+            {"name": "Rye Whiskey"},
+            {"name": "Benedictine"},
+            {"name": "Maraschino Liqueur"},
+            {"name": "Peychaud Bitters"},
+            {"name": "Absinthe"}
+        ],
+        "container": {"name": "Double Rocks Glass"}
+    },
+    {
+        "name": "Japanese Flip",
+        "bartender": "Paul Clarke",
+        "ingredients": [
+            {"name": "Cognac"},
+            {"name": "Orgeat"},
+            {"name": "Egg"},
+            {"name": "Nutmeg"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Stone Fruit Sour",
+        "bartender": "Zane Harris",
+        "ingredients": [
+            {"name": "Gin"},
+            {"name": "Lemon Juice"},
+            {"name": "Apricot Liqueur"},
+            {"name": "Lillet"},
+            {"name": "Peach Bitters"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Agavoni",
+        "bartender": "Bastian Heuser",
+        "ingredients": [
+            {"name": "Blanco Tequila"},
+            {"name": "Sweet Vermouth"},
+            {"name": "Campari"},
+            {"name": "Orange Bitters"},
+            {"name": "Peach Bitters"}
+        ],
+        "container": {"name": "Rocks Glass"}
+    },
+    {
+        "name": "Negroni Swizzle",
+        "bartender": "Giuseppe Gonzalez",
+        "ingredients": [
+            {"name": "Gin"},
+            {"name": "Sweet Vermouth"},
+            {"name": "Campari"},
+            {"name": "Club Soda"},
+            {"name": "Salt"}
+        ],
+        "container": {"name": "Highball Glass"}
+    },
+    {
+        "name": "Fort Washington Flip",
+        "bartender": "Misty Kalkofen",
+        "ingredients": [
+            {"name": "Apple Brandy"},
+            {"name": "Benedictine"},
+            {"name": "Maple Syrup"},
+            {"name": "Egg"},
+            {"name": "Nutmeg"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "Green Glacier",
+        "bartender": "Jamie Boudreau",
+        "ingredients": [
+            {"name": "Brandy"},
+            {"name": "Green Chartreuse"},
+            {"name": "White Creme de Cacao"},
+            {"name": "Angostura Bitters"}
+        ],
+        "container": {"name": "Cocktail Glass"}
+    },
+    {
+        "name": "The Prospector",
+        "bartender": "Jay Jones",
+        "ingredients": [
+            {"name": "Cognac"},
+            {"name": "Green Chartreuse"},
+            {"name": "White Creme de Cacao"},
+            {"name": "Cointreau"}
+        ],
+        "container": {"name": "Rocks Glass"}
+    },
+    {
+        "name": "Brigadier",
+        "bartender": "Neyah White",
+        "ingredients": [
+            {"name": "Green Chartreuse"},
+            {"name": "Cherry Heering"},
+            {"name": "Hot Chocolate"}
+        ],
+        "container": {"name": "Mug"}
+    },
+    {
         "name": "Daquiri",
         "ingredients": [
             {"name": "White Rum"},

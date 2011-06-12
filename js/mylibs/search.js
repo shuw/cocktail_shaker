@@ -1,6 +1,12 @@
 (function(CS) {
 	
 	function makeDrink(ingrediants, drink, min_matching, max_missing) {
+		if (!drink.ingredients || !drink.ingredients.length) {
+			return {
+				isMatched: false
+			};
+		}
+		
 		var drink_ingrediants = drink.ingredients,
 			missing = 0,
 			have = 0;

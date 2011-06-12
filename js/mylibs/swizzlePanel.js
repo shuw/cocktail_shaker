@@ -34,8 +34,11 @@ function getCocktailDisplay(result, buddies) {
 	if (result.missing.length) {
 	    itemText += " (" + result.missing.map(function(x) { return "-" + x; }).join(", ") + ")";
 	}
+	if (cocktail.bartender) {
+		itemText += " recommended by <a href=\"#\">" + cocktail.bartender + "</a>"; 
+	}
 	
-	$('#swizzler-result-title').text(itemText);
+	$('#swizzler-result-title').html(itemText);
 	
 	var details = $('<div class="directions">');
 
@@ -58,7 +61,10 @@ function getCocktailDisplay(result, buddies) {
 		ingredients.append(items);
 	}
 	
-	var matchedBuddies = matchBuddes(cocktail, buddies);
+	var matchedBuddies = [];
+	if (cocktail.name != "Disappointment") {
+		matchedBuddies = matchBuddes(cocktail, buddies);
+	}
 	
 	var matchedBuddies = $(matchedBuddies).filter(function() {
 		return this.uid != current_user;
@@ -101,6 +107,10 @@ function getVisualDisplay(ingredients) {
 	
 	
 	$(ingredients).each(function() {
+		if (!this.amount) {
+			return;
+		}
+		
 		var comps = this.amount.split(" ").map(function(o) {return o.trim().toLowerCase(); });
 		
 		if (comps.length != 2) {
@@ -154,6 +164,7 @@ function getVisualDisplay(ingredients) {
 			height: 140,
 			width: 180
 		},
+		backgroundColor: "#E6E6E6",
 		legend: 'right'
 	});
 }
