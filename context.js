@@ -21,7 +21,7 @@ function index_context() {
     });
     
     setActivePanel("shake");
-    $(".homeButton").click(function() {
+    $(".homeButton").button().click(function() {
         setActivePanel("shake");
 	});
     
