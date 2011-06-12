@@ -44,9 +44,6 @@
 <body>
   <script>
   
-
-    document.domain = "mybar.mobi";
-
     // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
     MBP.scaleFix();
     
@@ -57,6 +54,8 @@
     });
     
     google.load('visualization', '1', {'packages':['corechart']});
+
+    document.domain = "mybar.mobi";
   </script>
   
   <script>
@@ -101,7 +100,7 @@
 		</div>
 	</div>
 	<div class="panels">
-	  <div id="shakePanel">
+	  <div id="shakePanel" class="panel">
 		  <div class="header">
 			  <a id="editBarButton" class="advancedButton navigation">My Bar</a>
 			  <a class="navigation advancedButton" id="lookupButton">Look Up</a>
@@ -117,7 +116,7 @@
 		  </div>
 	  </div>
   
-	  <div id="barPanel">
+	  <div id="barPanel" class="panel">
 		  <div class="header">
 			  <a class="homeButton navigation">Swizzle It</a>
 		  </div>
@@ -132,7 +131,7 @@
 	  </div>
     
     
-	  <div id="searchPanel">
+	  <div id="searchPanel" class="panel">
 	    <div class="header">
 		    <a class="homeButton navigation">Swizzle It</a>
 	    </div>
