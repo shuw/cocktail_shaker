@@ -22,15 +22,5 @@ function index_context() {
 
 function gotData(recipes) {
     new lookupPanel(recipes);
-    new myBar(recipes);
+    new swizzlePanel(recipes);
 }
-
-$.ajax({
-     url: 'data/recipes.json',
-     dataType: 'json',
-     success: function(recipes) {
-        gotData(recipes);
-     }
- });
-
-document.domain = "mybar.mobi";
