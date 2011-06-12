@@ -1,5 +1,5 @@
 (function(CS) {
-
+	
 	function makeDrink(ingrediants, drink, min_matching, max_missing) {
 		var drink_ingrediants = drink.ingredients,
 			missing = 0,
@@ -60,11 +60,18 @@
 	
 	function searchFuzzy(ingredients, drinks) {
 		var results = search(ingredients, drinks);
-		if (results.length) {
+		if (results.length >= 2) {
 			return results;
 		}
 		
 		results = search(ingredients, drinks, 2, 1);
+		
+		if (results.length >= 2) {
+			return results;
+		}
+		
+		results = search(ingredients, drinks, 2, 2);
+		
 		return results;
 	}
 

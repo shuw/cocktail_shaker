@@ -1,5 +1,7 @@
-if (!window.current_user) {
+if (window.current_user === undefined) {
     window.current_user = getParameterByName('uid');
+} else if (window.current_user === 0) {
+    window.location = "http://mybar.mobi/user";
 }
 
 function index_context() {
@@ -27,10 +29,10 @@ function index_context() {
     window.context.setActivePanel = setActivePanel;
 }
 
-function gotData(recipes) {
+function gotData(recipes, buddies) {
     new lookupPanel(recipes);
     var bar = new myBar(recipes);
-    new swizzlePanel(recipes, bar);
+    new swizzlePanel(recipes, buddies, bar);
 }
 
 

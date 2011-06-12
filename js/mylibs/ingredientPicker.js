@@ -47,12 +47,9 @@ function ingredientPicker(recipes, context) {
         });
        
         o.ingredients = Object.keys(uniqueIngredients).sort(function(a,b){
-            if (a.length == b.length) {
-                return a - b;
-            }
-            else {
-                return a.length - b.length;
-            }
+           
+            return a.length - b.length;
+            
         });
         
         initPicker()
