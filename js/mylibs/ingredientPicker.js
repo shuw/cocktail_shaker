@@ -92,5 +92,10 @@ $.ajax({
      dataType: 'json',
      success: function(recipes) {
         new ingredientPicker(recipes);
+		swizzler = new Swizzler($('#swizzler-result'), function() {
+			return CS.search([], recipes, 10);
+		});
+		$('#swizzle-button').click(function() { swizzler.pick.call(swizzler); });
+		shakeDetector(swizzler.pick);
      }
  });
