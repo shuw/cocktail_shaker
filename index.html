@@ -63,6 +63,7 @@
     google.setOnLoadCallback(function() {
     $(document).ready(function() {
 	    new index_context();
+	    
 	    $.when(
 		$.ajax({
 		    url: 'data/recipes.json',
@@ -73,6 +74,9 @@
 		    dataType: 'json'
 		})
 	    ).done(function(recipes, buddies) {
+	        $("#main").show();
+		$("#loading").hide();
+	  
 		gotData(recipes[0], buddies[0]);
 	    });
 
@@ -84,9 +88,8 @@
     });
     });
   </script>
-
-
-	<div id="main">
+      <div id="loading">Loading</div>
+	<div style="display:none;" id="main">
 		<div id="swizzleHeader">
 			<h1 class="swizzle">Swizzle<span class="dot">.</span>it</h1>
 			<div class="authentication">
@@ -146,5 +149,6 @@
   </div>
   <br />
   <br />
+  </div>
 </body>
 </html>

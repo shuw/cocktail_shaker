@@ -153,7 +153,8 @@ function getVisualDisplay(ingredients) {
 		chartArea: {
 			left: 0,
 			right: 0,
-			height: 140
+			height: 140,
+			width: 180
 		},
 		legend: 'right'
 	});
