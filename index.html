@@ -67,9 +67,17 @@
 					gotData(recipes);
 				}
 			});
+
+			if ( typeof window.DeviceMotionEvent == 'undefined' ) {
+				$('#swizzle-control').append('<input type="button" id="swizzle-button" value="Swizzle" />');
+			} else {
+				$('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
+			}
 		});
 
   </script>
+
+
 	<div id="swizzleHeader">
 		<h1 class="swizzle">Swizzle<span class="dot">.</span>it</h1>
 	</div>
@@ -78,8 +86,7 @@
 			<h1>Cocktail Shaker</h1>
 			<a id="editBarButton">My Bar</a>
 		</div>
-    <div>
-			<input type="button" id="swizzle-button" value="Swizzle" />
+    <div id="swizzle-control">
     </div>
     <div id="swizzler-result">
     </div>

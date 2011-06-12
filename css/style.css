@@ -79,6 +79,14 @@ div.header > * {
 	margin: 1em 0px 0px;
 }
 
+#swizzle-control {
+	margin-bottom: 1em;
+}
+
+.instruction {
+	color: #aaa;
+}
+
 h1.swizzle {
 	font-family: 'Play', arial, serif;
 	font-size: 22px;
