@@ -1,5 +1,21 @@
 function getCocktailDisplay(cocktail) {
-	return $('<div class="cocktail result"><h3>'+cocktail.name+'</h3><div class="directions">'+cocktail.directions+'</div></div>');
+	header = $('h3').text(cocktail.name);
+	
+	var details = $('<div class="directions">');
+
+	if (cocktail.directions) {
+		details.text(cocktail.directions);
+	} else {
+		var ingredients = $('ul');
+		details.append(ingredients);
+		
+		$(cocktail.ingredients).each(function() {
+			ingredients.append( $('li').text(this.name) );
+		});
+		debugger
+	}
+
+	return $('<div class="cocktail result">').append(header, details);
 }
 
 function swizzlePanel(recipes, myBar) {

@@ -1,5 +1,7 @@
 if (!window.current_user) {
-    window.current_user = 74;
+    window.current_user = getParameterByName('uid');
+    
+    
 }
 
 function index_context() {
@@ -31,4 +33,17 @@ function gotData(recipes) {
     new lookupPanel(recipes);
     var bar = new myBar(recipes);
     new swizzlePanel(recipes, bar);
+}
+
+
+function getParameterByName( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
