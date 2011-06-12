@@ -27,10 +27,10 @@ function index_context() {
     window.context.setActivePanel = setActivePanel;
 }
 
-function gotData(recipes) {
+function gotData(recipes, buddies) {
     new lookupPanel(recipes);
     var bar = new myBar(recipes);
-    new swizzlePanel(recipes, bar);
+    new swizzlePanel(recipes, buddies, bar);
 }
 
 

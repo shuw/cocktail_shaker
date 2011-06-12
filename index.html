@@ -58,22 +58,26 @@
   
   <script>   
     $(document).ready(function() {
-      new index_context();
+	    new index_context();
+	    $.when(
+		$.ajax({
+		    url: 'data/recipes.json',
+		    dataType: 'json'
+		}),    
+		$.ajax({
+		    url: 'data/buddies.json',
+		    dataType: 'json'
+		})
+	    ).done(function(recipes, buddies) {
+		gotData(recipes[0], buddies[0]);
+	    });
 
-			$.ajax({
-				url: 'data/recipes.json',
-				dataType: 'json',
-				success: function(recipes) {
-					gotData(recipes);
-				}
-			});
-
-			if ( typeof window.DeviceMotionEvent == 'undefined' ) {
-				$('#swizzle-control').append('<button id="swizzle-button">Swizzle!</button>');
-			} else {
-				$('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
-			}
-		});
+	    if ( typeof window.DeviceMotionEvent == 'undefined' ) {
+		    $('#swizzle-control').append('<button id="swizzle-button">Swizzle!</button>');
+	    } else {
+		    $('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
+	    }
+    });
 
   </script>
 
