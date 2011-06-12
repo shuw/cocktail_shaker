@@ -85,7 +85,6 @@ function getCocktailDisplay(result, buddies) {
 	return $('<div class="cocktail result">').append(details, drinkingDuddies);
 }
 
-<<<<<<< HEAD
 function matchBuddes(cocktail, buddies) {
 	var matched = $(buddies).map(function() {
 		if (Math.random() < 0.25) {
@@ -122,16 +121,6 @@ function getVisualDisplay(ingredients) {
 		});
 		
 		totalAmount += amount;
-=======
-function swizzlePanel(recipes, buddies, myBar) {
-	var o = this;
-	$("#editBarButton").click(function() {
-		context.setActivePanel("bar");
-	});
-	
-	$("#lookupButton").click(function() {
-		context.setActivePanel("search");
->>>>>>> c2e3808a6c9bb2954239ecca1be2c5445a5aed3f
 	});
 
 	
