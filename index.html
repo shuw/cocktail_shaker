@@ -20,6 +20,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.js"></script>
   <script src="js/libs/jquery.autocomplete.js"></script>
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
@@ -54,9 +55,12 @@
       test : Modernizr.mq('(min-width)'),
       nope : ['js/libs/respond.min.js']
     });
+    
+    google.load('visualization', '1', {'packages':['corechart']});
   </script>
   
-  <script>   
+  <script>
+    google.setOnLoadCallback(function() {
     $(document).ready(function() {
 	    new index_context();
 	    $.when(
@@ -78,7 +82,7 @@
 		    $('#swizzle-control').append('<span class="instruction">Shake to swizzle</span>');
 	    }
     });
-
+    });
   </script>
 
 
@@ -96,6 +100,8 @@
 			</div>
 			<div class="swizzle" id="swizzle-control">
 			</div>
+			<h3 id="swizzler-result-title"></h3>
+			<div id="result-chart"></div>
 			<div id="swizzler-result">
 			</div>
 			<div class="footer">
